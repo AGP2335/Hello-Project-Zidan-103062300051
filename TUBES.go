@@ -1,5 +1,7 @@
 package main
 
+//Abdullah zidan - TUGAS WGTIK
+
 import (
 	"bufio"
 	"fmt"
@@ -8,11 +10,11 @@ import (
 )
 
 type Mahasiswa struct {
-	Nama     string
-	Umur     int
-	Jurusan  string
-	Alamat   string
-	Nilai    int
+	Nama    string
+	Umur    int
+	Jurusan string
+	Alamat  string
+	Nilai   int
 }
 
 var mahasiswas []Mahasiswa
@@ -360,7 +362,7 @@ func tampilkanMahasiswaTidakKeterima() {
 func urutkanCalonMahasiswa(data []Mahasiswa) []Mahasiswa {
 	sortedData := make([]Mahasiswa, len(data))
 	copy(sortedData, data)
-	
+
 	for i := 0; i < len(sortedData)-1; i++ {
 		minIndex := i
 		for j := i + 1; j < len(sortedData); j++ {
@@ -370,14 +372,14 @@ func urutkanCalonMahasiswa(data []Mahasiswa) []Mahasiswa {
 		}
 		sortedData[i], sortedData[minIndex] = sortedData[minIndex], sortedData[i]
 	}
-	
+
 	return sortedData
 }
 
 func urutkanCalonMahasiswaNama(data []Mahasiswa) []Mahasiswa {
 	sortedData := make([]Mahasiswa, len(data))
 	copy(sortedData, data)
-	
+
 	for i := 0; i < len(sortedData)-1; i++ {
 		minIndex := i
 		for j := i + 1; j < len(sortedData); j++ {
@@ -387,14 +389,14 @@ func urutkanCalonMahasiswaNama(data []Mahasiswa) []Mahasiswa {
 		}
 		sortedData[i], sortedData[minIndex] = sortedData[minIndex], sortedData[i]
 	}
-	
+
 	return sortedData
 }
 
 func urutkanCalonMahasiswaJurusan(data []Mahasiswa) []Mahasiswa {
 	sortedData := make([]Mahasiswa, len(data))
 	copy(sortedData, data)
-	
+
 	for i := 0; i < len(sortedData)-1; i++ {
 		minIndex := i
 		for j := i + 1; j < len(sortedData); j++ {
@@ -404,7 +406,7 @@ func urutkanCalonMahasiswaJurusan(data []Mahasiswa) []Mahasiswa {
 		}
 		sortedData[i], sortedData[minIndex] = sortedData[minIndex], sortedData[i]
 	}
-	
+
 	return sortedData
 }
 
